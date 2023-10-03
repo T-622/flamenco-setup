@@ -22,4 +22,4 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 echo "Step 4 - Pulling And Running Docker Flamenco Image"
 sudo mkdir /mnt/flamencoData
-sudo docker run -d --name flamenco -p 8080:8080 -p 1900:1900 -p 5000:5000 -v /mnt/flamencoData:/mnt/flamencoData tpeppy/flamenco-utils
+sudo docker run -d --name flamenco -p 8080:8080 -p 1900:1900 -p 5000:5000 -v /mnt/flamencoData:/mnt/flamencoData tpeppy/flamenco
