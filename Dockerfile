@@ -76,4 +76,7 @@ COPY flamenco-worker.yaml /code/flamenco/
 #COPY flamenco-manager.yaml /code/flamenco/    
 
 WORKDIR /code/flamenco/
+# 2 Commands Are Possible (Use The Correct Line According To Running The Manager Or Worker):
+# CMD ["/code/flamenco/flamenco-manager"]
+# CMD ["/code/flamenco/flamenco-worker"]
 CMD ["/code/flamenco/flamenco-manager"]
