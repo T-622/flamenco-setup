@@ -67,9 +67,13 @@ RUN mkdir -p /code/benchmark-src/ && \
 
 ENV DEBIAN_FRONTEND=dialog
 
-# Flamenco Manager and Worker configuration
-COPY flamenco-worker.yaml /code/flamenco/
-COPY flamenco-manager.yaml /code/flamenco/
+# Flamenco Manager and Worker configuration -> Make Sure The Uncommented "COPY" Lines Have The Files "flamenco-worker.yaml" and "flamenco-manager.yaml" in the same directory as the Dockerfile
+
+COPY flamenco-worker.yaml /code/flamenco/    
+
+# Only Uncomment The Below Line If Your Local Directory Has A Fully Populated Manager.YAML File
+
+#COPY flamenco-manager.yaml /code/flamenco/    
 
 WORKDIR /code/flamenco/
 CMD ["/code/flamenco/flamenco-manager"]
